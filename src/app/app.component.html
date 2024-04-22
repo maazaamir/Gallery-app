@@ -1,0 +1,66 @@
+
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="min-height: 100vh"
+  *ngIf="loader"
+>
+  <div
+    class="spinner-grow text-primary"
+    style="width: 3rem; height: 3rem"
+    role="status"
+  >
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<div
+  class="d-flex justify-content-center align-items-center bg-image"
+  *ngIf="!loader"
+>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand d-none" href="#"></a>
+    </div>
+  </nav>
+</div>
+
+<div class="component">
+  <div class="text">UNSPLASH++</div>
+</div>
+
+
+<div class="search-container">
+  <i class="bi bi-amd"></i>
+  <input
+    type="text"
+    [(ngModel)]="searchQuery"
+    (keydown)="searchImages($event)"
+    placeholder="Search for images..."
+  />
+</div>
+
+<div class="image-container" #imageContainer>
+  <div *ngFor="let image of getDisplayedImages()">
+    <img
+      [src]="image"
+      alt="Lazy Loaded Image"
+      loading="lazy"
+      class="lazy-image"
+    />
+  </div>
+</div>
+
+<div class="pagination d-flex justify-content-center">
+  <button (click)="previousPage()" [disabled]="currentPage === 1">
+    Previous
+  </button>
+  <span>{{ currentPage }} / {{ getTotalPages() }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === getTotalPages()">
+    Next
+  </button>
+</div>
+<br />
+
+<footer>
+  <p>&copy; 2024 Maaz Aamir. All rights reserved.</p>
+</footer>

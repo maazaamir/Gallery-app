@@ -1,0 +1,172 @@
+/* Search container */
+.search-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.search-container input[type="text"] {
+  width: 20%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #0c0d0e; /* Set border */
+  border-radius: 20px;
+}
+
+.search-container input[type="text"]::placeholder {
+  color: #ccc;
+}
+
+
+
+/* Image container */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-container img {
+  height: 550px;
+  width: 289px; /* Adjust image width as needed */
+  margin: 100px; /* Equal padding on all sides */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image wrapper for lazy loading */
+.image-wrapper {
+  opacity: 0; /* Initially hide images */
+  transition: opacity 1s ease; /* Smooth transition for opacity change */
+}
+
+.lazy-image {
+  width: 200%; /* Adjust image dimensions as needed */
+  height: auto;
+}
+
+.image-container img:hover {
+  opacity: 0.8; /* Change opacity on hover */
+}
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+}
+/* CSS for the list */
+ul {
+  list-style-type: none;
+  padding: 12;
+  margin: 2;
+}
+
+/* CSS for list items */
+li {
+  display: inline; /* Display list items horizontally */
+  margin-right: 1px; /* Add some space between list items */
+}
+
+/* CSS for the link */
+a {
+  font-size: larger;
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Set link color */
+  font-weight: bolder; /* Make the text bold */
+}
+
+/* CSS for link hover effect */
+a:hover {
+  color: #007bff; /* Change link color on hover */
+}
+.component {
+  position: relative; /* Make the parent container positioned */
+}
+
+.component .text {
+  font-size: 22px;
+  font-weight: bolder;
+  position: absolute; /* Position the text absolutely within the parent container */
+  top: 10%; /* Adjust the top position to center vertically */
+  left: 10%; /* Adjust the left position to center horizontally */
+  transform: translate(-10%, -10%); /* Translate the text back by half of its own width and height to center it perfectly */
+}
+
+.secondary-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.secondary-menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.secondary-menu button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.secondary-menu button:hover {
+  background-color: #0056b3;
+}
+.login-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #666;
+}
+.bg-image {
+  background-image: url("/assets/background-image.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  background-color: #007bff; /* Button color */
+  color: white;
+  border: none; /* Remove border */
+  border-radius: 20px; /* Make button round */
+  padding: 6px 12px; /* Adjust padding for smaller size */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #0056b3; /* Button color on hover */
+}
+
+.pagination span {
+  margin: 0 10px; /* Adjust spacing between buttons and page number */
+}
+
+h3.custom-font {
+  font-family: "Open Sans", sans-serif; /* Use Open Sans font */
+  font-weight: bold; /* Make the font bold */
+}
+h3 {
+  font-family: "Open Sans", sans-serif; /* Use Open Sans font */
+  font-weight: bolder; /* Make the font bold */
+}
